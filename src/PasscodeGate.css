@@ -1,0 +1,94 @@
+.passcode-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #faf6f0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.passcode-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: #fffdfb;
+  border-radius: 20px;
+  padding: 44px 40px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 20px 50px -20px rgba(150, 90, 100, 0.25);
+  border: 1px solid #f0e2dd;
+  text-align: center;
+}
+
+.passcode-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #3d2f2f;
+}
+
+.passcode-subtitle {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: #a9636f;
+}
+
+.passcode-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ecd8dc;
+  background: #fbf7f2;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #3d2f2f;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.passcode-input:focus {
+  border-color: #d1476a;
+}
+
+.passcode-error {
+  color: #c73f61;
+  font-size: 0.82rem;
+}
+
+.passcode-button {
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #d1476a;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.passcode-button:hover {
+  background: #b93a5b;
+}
+
+.passcode-button:active {
+  transform: scale(0.97);
+}
+
+.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}

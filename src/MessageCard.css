@@ -1,0 +1,158 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #faf6f0;
+}
+
+.message-card-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #faf6f0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- Floating hearts, cakes & balloons ---------- */
+.icon-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.float-icon {
+  position: absolute;
+  bottom: -140px;
+  opacity: 0.9;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.12));
+  animation: icon-float linear infinite;
+}
+
+.float-icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes icon-float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  8% { opacity: 0.9; }
+  50% {
+    transform: translateY(-60vh) translateX(20px) rotate(8deg);
+  }
+  92% { opacity: 0.85; }
+  100% {
+    transform: translateY(-115vh) translateX(-15px) rotate(-6deg);
+    opacity: 0;
+  }
+}
+
+/* ---------- Card ---------- */
+.message-card-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.message-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  background: #fffdfb;
+  border-radius: 33px;
+  padding: 72px 84px;
+  max-width: 720px;
+  min-height: 300px;
+  box-shadow: 0 20px 50px -20px rgba(150, 90, 100, 0.25);
+  border: 1px solid #f0e2dd;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  text-align: center;
+}
+
+.message-text {
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-style: italic;
+  font-size: 1.95rem;
+  line-height: 1.55;
+  color: #3d2f2f;
+  margin: 0;
+}
+
+.message-author {
+  font-size: 1.35rem;
+  color: #d1476a;
+  letter-spacing: 0.02em;
+}
+
+.arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #fbe9ee;
+  color: #d1476a;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.arrow:hover {
+  background: #f6d3dd;
+  transform: scale(1.06);
+}
+
+.arrow:active {
+  transform: scale(0.95);
+}
+
+/* ---------- Dots ---------- */
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ecd8dc;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dot.active {
+  background: #d1476a;
+  transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+  .message-card {
+    padding: 54px 36px;
+    gap: 18px;
+  }
+  .message-text {
+    font-size: 1.65rem;
+  }
+}
