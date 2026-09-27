@@ -6,6 +6,8 @@
   justify-content: center;
   background: #faf6f0;
   font-family: system-ui, -apple-system, sans-serif;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .passcode-card {

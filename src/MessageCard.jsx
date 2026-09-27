@@ -95,6 +95,19 @@ export default function MessageCard() {
           )}
 
           <div className="message-content">
+            {isLast && (
+              <svg className="final-cake" viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="46" y="4" width="4" height="18" fill="#e8557a" />
+                <circle cx="48" cy="3" r="4" fill="#f5a623" />
+                <path
+                  d="M18 32 Q26 20 34 32 Q42 20 50 32 Q58 20 66 32 Q74 20 82 32 L82 44 L18 44 Z"
+                  fill="#fdf3e2"
+                />
+                <rect x="16" y="44" width="68" height="40" rx="5" fill="#e8798a" />
+                <rect x="16" y="60" width="68" height="10" fill="#fdf3e2" opacity="0.6" />
+                <rect x="8" y="84" width="84" height="9" rx="4" fill="#fdf3e2" />
+              </svg>
+            )}
             <p className="message-text">"{current.text}"</p>
             {current.author && (
               <span className="message-author">— {current.author}</span>
